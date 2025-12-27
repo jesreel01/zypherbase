@@ -7,7 +7,9 @@ import {
   UserResponseDto,
 } from '@zypherbase/shared';
 import { plainToInstance } from 'class-transformer';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('Authentication')
 @Controller('auth')
 export class AuthController {
   constructor(private readonly authService: AuthService) {}

@@ -1,7 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { ConflictException } from '@nestjs/common';
 import { AuthService } from './auth.service';
-import { UsersService } from '../../users/users.service';
+import { UsersService } from '../../modules/users/users.service';
 import { JwtTokenService } from './jwt-token.service';
 import { RegisterDto } from '@zypherbase/shared';
 import * as bcrypt from 'bcrypt';
