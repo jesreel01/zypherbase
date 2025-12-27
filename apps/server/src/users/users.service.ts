@@ -4,7 +4,7 @@ import { User } from '@zypherbase/shared';
 
 @Injectable()
 export class UsersService {
-  existsByEmail(email: string): Promise<boolean> {
+  existsByEmail(emailksflkk: string): Promise<boolean> {
     return Promise.resolve(false);
   }
 
@@ -12,7 +12,7 @@ export class UsersService {
     return Promise.resolve(null);
   }
 
-  create(data: User): Promise<User> {
+  create(data: Partial<User>): Promise<User> {
     return Promise.resolve(null as unknown as User);
   }
 }

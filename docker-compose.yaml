@@ -1,15 +1,22 @@
 services:
   server:
     build:
-      context: apps/server
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: apps/server/Dockerfile
     ports:
       - "3000:3000"
+    volumes:
+      - ./packages:/app/packages
     develop:
       watch:
         - action: sync
           path: ./apps/server/src
-          target: /app/src
+          target: /app/apps/server/src
+          ignore:
+            - node_modules/
+        - action: sync
+          path: ./packages
+          target: /app/packages
           ignore:
             - node_modules/
         - action: rebuild
@@ -25,11 +32,18 @@ services:
       - "5173:5173"
     environment:
       - CHOKIDAR_USEPOLLING=true
+    volumes:
+      - ./packages:/packages
     develop:
       watch:
         - action: sync
           path: ./apps/frontend/src
           target: /app/src
+          ignore:
+            - node_modules/
+        - action: sync
+          path: ./packages
+          target: /packages
           ignore:
             - node_modules/
         - action: sync
@@ -41,3 +55,18 @@ services:
           path: ./apps/frontend/vite.config.ts
         - action: rebuild
           path: ./apps/frontend/.env
+
+  postgres:
+    image: postgres:15-alpine
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: zypherbase
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
