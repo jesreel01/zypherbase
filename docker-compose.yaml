@@ -1,0 +1,43 @@
+services:
+  server:
+    build:
+      context: apps/server
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    develop:
+      watch:
+        - action: sync
+          path: ./apps/server/src
+          target: /app/src
+          ignore:
+            - node_modules/
+        - action: rebuild
+          path: ./apps/server/package.json
+        - action: rebuild
+          path: ./apps/server/.env
+
+  frontend:
+    build:
+      context: apps/frontend
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    develop:
+      watch:
+        - action: sync
+          path: ./apps/frontend/src
+          target: /app/src
+          ignore:
+            - node_modules/
+        - action: sync
+          path: ./apps/frontend/public
+          target: /app/public
+        - action: rebuild
+          path: ./apps/frontend/package.json
+        - action: rebuild
+          path: ./apps/frontend/vite.config.ts
+        - action: rebuild
+          path: ./apps/frontend/.env
