@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../dist/apps/server",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "declaration": true,
+    "paths": {
+      "@zypherbase/shared": ["../../libs/shared/src/index.ts"],
+      "@zypherbase/database": ["../../libs/database/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "test", "dist", "**/*spec.ts"],
+  "include": ["src/**/*.ts"]
+}

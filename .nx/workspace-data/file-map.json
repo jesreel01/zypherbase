@@ -1,0 +1,687 @@
+{
+  "version": "6.0",
+  "nxVersion": "20.3.0",
+  "pathMappings": {
+    "@zypherbase/shared": [
+      "libs/shared/src/index.ts"
+    ],
+    "@zypherbase/database": [
+      "libs/database/src/index.ts"
+    ]
+  },
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": "package.json",
+        "hash": "7017652453042227378"
+      },
+      {
+        "file": "docker-compose.yaml",
+        "hash": "9175170463173898309"
+      },
+      {
+        "file": "nx.json",
+        "hash": "7250068865038866841"
+      },
+      {
+        "file": "pnpm-lock.yaml",
+        "hash": "10378996005091661716"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "8681795863893933549"
+      },
+      {
+        "file": "pnpm-workspace.yaml",
+        "hash": "2811845925925127796"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "17037623983607605106"
+      },
+      {
+        "file": ".npmrc",
+        "hash": "10595355383850223449"
+      },
+      {
+        "file": ".dockerignore",
+        "hash": "15294794378460727653"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "3999473556742372045"
+      },
+      {
+        "file": "LICENSE",
+        "hash": "15553496959705771468"
+      }
+    ],
+    "projectFileMap": {
+      "server": [
+        {
+          "file": "apps/server/.dockerignore",
+          "hash": "16646249633734643674"
+        },
+        {
+          "file": "apps/server/.gitignore",
+          "hash": "12634402967133909834"
+        },
+        {
+          "file": "apps/server/.prettierrc",
+          "hash": "9555875142989992828"
+        },
+        {
+          "file": "apps/server/Dockerfile",
+          "hash": "195352325012939677"
+        },
+        {
+          "file": "apps/server/README.md",
+          "hash": "10741870943097893083"
+        },
+        {
+          "file": "apps/server/config.json",
+          "hash": "15234191225009458770"
+        },
+        {
+          "file": "apps/server/eslint.config.mjs",
+          "hash": "8219800616725966065",
+          "deps": [
+            "npm:@eslint/js",
+            "npm:eslint-plugin-prettier",
+            "npm:globals",
+            "npm:typescript-eslint@8.50.1"
+          ]
+        },
+        {
+          "file": "apps/server/jest.config.js",
+          "hash": "10946399601878611994"
+        },
+        {
+          "file": "apps/server/project.json",
+          "hash": "4237344109023431358"
+        },
+        {
+          "file": "apps/server/src/app.controller.spec.ts",
+          "hash": "2727664763654384995",
+          "deps": [
+            "npm:@nestjs/testing"
+          ]
+        },
+        {
+          "file": "apps/server/src/app.controller.ts",
+          "hash": "4552329938751326480",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/server/src/app.module.ts",
+          "hash": "9177213578653424474",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/server/src/app.service.ts",
+          "hash": "16892833931858030153",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/server/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/server/src/main.ts",
+          "hash": "6040194479494646777",
+          "deps": [
+            "npm:@nestjs/core",
+            "npm:@nestjs/common",
+            "npm:@nestjs/swagger"
+          ]
+        },
+        {
+          "file": "apps/server/src/modules/auth/auth.controller.spec.ts",
+          "hash": "8263060083446727804",
+          "deps": [
+            "npm:@nestjs/testing"
+          ]
+        },
+        {
+          "file": "apps/server/src/modules/auth/auth.controller.ts",
+          "hash": "6450305668780627451",
+          "deps": [
+            "npm:@nestjs/common",
+            "@zypherbase/shared",
+            "npm:class-transformer",
+            "npm:@nestjs/swagger"
+          ]
+        },
+        {
+          "file": "apps/server/src/modules/auth/auth.module.ts",
+          "hash": "13558007438554914081",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/jwt"
+          ]
+        },
+        {
+          "file": "apps/server/src/modules/auth/decorators/auth.decorator.ts",
+          "hash": "7592537581669483863",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/server/src/modules/auth/entities/auth.entity.ts",
+          "hash": "15329573349289165200"
+        },
+        {
+          "file": "apps/server/src/modules/auth/guards/dynamic-auth.guard.ts",
+          "hash": "6770462639942045688",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/passport"
+          ]
+        },
+        {
+          "file": "apps/server/src/modules/auth/services/auth.service.spec.ts",
+          "hash": "5694037696793438426",
+          "deps": [
+            "npm:@nestjs/testing",
+            "npm:@nestjs/common",
+            "@zypherbase/shared",
+            "npm:bcrypt"
+          ]
+        },
+        {
+          "file": "apps/server/src/modules/auth/services/auth.service.ts",
+          "hash": "13998662267023503874",
+          "deps": [
+            "npm:@nestjs/common",
+            "@zypherbase/shared",
+            "npm:bcrypt"
+          ]
+        },
+        {
+          "file": "apps/server/src/modules/auth/services/jwt-token.service.ts",
+          "hash": "4282689295911476456",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/jwt"
+          ]
+        },
+        {
+          "file": "apps/server/src/modules/auth/strategies/cookie.strategy.ts",
+          "hash": "15033064786231374517",
+          "deps": [
+            "npm:passport-cookie",
+            "npm:@nestjs/passport",
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/server/src/modules/auth/strategies/jwt.strategy.ts",
+          "hash": "9205412074017395475",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/passport",
+            "npm:passport-jwt"
+          ]
+        },
+        {
+          "file": "apps/server/src/modules/authorization/authorization.controller.spec.ts",
+          "hash": "3364744802728284817",
+          "deps": [
+            "npm:@nestjs/testing"
+          ]
+        },
+        {
+          "file": "apps/server/src/modules/authorization/authorization.controller.ts",
+          "hash": "17403672221872126860",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/server/src/modules/authorization/authorization.module.ts",
+          "hash": "12891625778054578195",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/server/src/modules/authorization/authorization.service.spec.ts",
+          "hash": "3257744726462839019",
+          "deps": [
+            "npm:@nestjs/testing"
+          ]
+        },
+        {
+          "file": "apps/server/src/modules/authorization/authorization.service.ts",
+          "hash": "8693626828720092773",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/server/src/modules/authorization/entities/membership.entity.ts",
+          "hash": "8910055795812871901"
+        },
+        {
+          "file": "apps/server/src/modules/authorization/entities/permission-group.entity.ts",
+          "hash": "3244804454736130772"
+        },
+        {
+          "file": "apps/server/src/modules/authorization/entities/permission.entity.ts",
+          "hash": "8274305800392262361"
+        },
+        {
+          "file": "apps/server/src/modules/authorization/entities/role.entity.ts",
+          "hash": "9503150023851275381"
+        },
+        {
+          "file": "apps/server/src/modules/database/database.module.ts",
+          "hash": "13683670930157547670",
+          "deps": [
+            "npm:@nestjs/common",
+            "@zypherbase/database"
+          ]
+        },
+        {
+          "file": "apps/server/src/modules/tenancy/organizations/dto/create-organization.dto.ts",
+          "hash": "4626608050271820329"
+        },
+        {
+          "file": "apps/server/src/modules/tenancy/organizations/dto/update-organization.dto.ts",
+          "hash": "7247251770675872424",
+          "deps": [
+            "npm:@nestjs/mapped-types"
+          ]
+        },
+        {
+          "file": "apps/server/src/modules/tenancy/organizations/entities/organization.entity.ts",
+          "hash": "13791587836636412060"
+        },
+        {
+          "file": "apps/server/src/modules/tenancy/organizations/organizations.controller.spec.ts",
+          "hash": "16728850041731856134",
+          "deps": [
+            "npm:@nestjs/testing"
+          ]
+        },
+        {
+          "file": "apps/server/src/modules/tenancy/organizations/organizations.controller.ts",
+          "hash": "430466142443995052",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/server/src/modules/tenancy/organizations/organizations.module.ts",
+          "hash": "14087406836937800246",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/server/src/modules/tenancy/organizations/organizations.service.spec.ts",
+          "hash": "16393503875599776973",
+          "deps": [
+            "npm:@nestjs/testing"
+          ]
+        },
+        {
+          "file": "apps/server/src/modules/tenancy/organizations/organizations.service.ts",
+          "hash": "7465911462075937655",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/server/src/modules/tenancy/workspaces/entities/workspace.entity.ts",
+          "hash": "319897879649320001"
+        },
+        {
+          "file": "apps/server/src/modules/tenancy/workspaces/workspaces.controller.spec.ts",
+          "hash": "5333544950431926117",
+          "deps": [
+            "npm:@nestjs/testing"
+          ]
+        },
+        {
+          "file": "apps/server/src/modules/tenancy/workspaces/workspaces.controller.ts",
+          "hash": "1964886693088978026",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/server/src/modules/tenancy/workspaces/workspaces.module.ts",
+          "hash": "12581696111493475709",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/server/src/modules/tenancy/workspaces/workspaces.service.spec.ts",
+          "hash": "13083845156253473006",
+          "deps": [
+            "npm:@nestjs/testing"
+          ]
+        },
+        {
+          "file": "apps/server/src/modules/tenancy/workspaces/workspaces.service.ts",
+          "hash": "1241326940084079506",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/server/src/modules/users/dto/create-user.dto.ts",
+          "hash": "11951934532071216347"
+        },
+        {
+          "file": "apps/server/src/modules/users/dto/update-user.dto.ts",
+          "hash": "3072118038373682147",
+          "deps": [
+            "npm:@nestjs/mapped-types"
+          ]
+        },
+        {
+          "file": "apps/server/src/modules/users/repositories/user.repository.ts",
+          "hash": "3256848181160968432",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:drizzle-orm",
+            "@zypherbase/database",
+            "@zypherbase/shared"
+          ]
+        },
+        {
+          "file": "apps/server/src/modules/users/users.controller.spec.ts",
+          "hash": "630008681152191121",
+          "deps": [
+            "npm:@nestjs/testing"
+          ]
+        },
+        {
+          "file": "apps/server/src/modules/users/users.controller.ts",
+          "hash": "12101079754688505093",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/server/src/modules/users/users.module.ts",
+          "hash": "6139759817762196867",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/server/src/modules/users/users.service.spec.ts",
+          "hash": "7278099433523887940",
+          "deps": [
+            "npm:@nestjs/testing"
+          ]
+        },
+        {
+          "file": "apps/server/src/modules/users/users.service.ts",
+          "hash": "6367432725953549897",
+          "deps": [
+            "npm:@nestjs/common",
+            "@zypherbase/shared"
+          ]
+        },
+        {
+          "file": "apps/server/test/app.e2e-spec.ts",
+          "hash": "2765043824989823198",
+          "deps": [
+            "npm:@nestjs/testing",
+            "npm:@nestjs/common",
+            "npm:supertest"
+          ]
+        },
+        {
+          "file": "apps/server/test/jest-e2e.json",
+          "hash": "7570273541430074424"
+        },
+        {
+          "file": "apps/server/tsconfig.app.json",
+          "hash": "13117888527407272185"
+        },
+        {
+          "file": "apps/server/tsconfig.json",
+          "hash": "14026565874288954420"
+        },
+        {
+          "file": "apps/server/webpack.config.js",
+          "hash": "6171959319592495835",
+          "deps": [
+            "npm:@nx/webpack"
+          ]
+        }
+      ],
+      "frontend": [
+        {
+          "file": "apps/frontend/.dockerignore",
+          "hash": "16646249633734643674"
+        },
+        {
+          "file": "apps/frontend/.gitignore",
+          "hash": "13046175384202504187"
+        },
+        {
+          "file": "apps/frontend/Dockerfile",
+          "hash": "11195769553477553705"
+        },
+        {
+          "file": "apps/frontend/README.md",
+          "hash": "6529887400882112953"
+        },
+        {
+          "file": "apps/frontend/eslint.config.js",
+          "hash": "15742501133213314744",
+          "deps": [
+            "npm:@eslint/js",
+            "npm:globals",
+            "npm:eslint-plugin-react-hooks",
+            "npm:eslint-plugin-react-refresh",
+            "npm:typescript-eslint",
+            "npm:eslint"
+          ]
+        },
+        {
+          "file": "apps/frontend/index.html",
+          "hash": "12846648404026521447"
+        },
+        {
+          "file": "apps/frontend/project.json",
+          "hash": "3254166057535733770"
+        },
+        {
+          "file": "apps/frontend/public/vite.svg",
+          "hash": "16046085400642193116"
+        },
+        {
+          "file": "apps/frontend/src/App.css",
+          "hash": "3739391659270974612"
+        },
+        {
+          "file": "apps/frontend/src/App.tsx",
+          "hash": "2148180482692964333",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/frontend/src/assets/react.svg",
+          "hash": "16069471864800376455"
+        },
+        {
+          "file": "apps/frontend/src/index.css",
+          "hash": "13504153635654440336"
+        },
+        {
+          "file": "apps/frontend/src/main.tsx",
+          "hash": "11038211546439381838",
+          "deps": [
+            "npm:react",
+            "npm:react-dom"
+          ]
+        },
+        {
+          "file": "apps/frontend/tsconfig.app.json",
+          "hash": "8582897055855772440"
+        },
+        {
+          "file": "apps/frontend/tsconfig.json",
+          "hash": "2365188958523842680"
+        },
+        {
+          "file": "apps/frontend/tsconfig.node.json",
+          "hash": "11862655124761714159"
+        },
+        {
+          "file": "apps/frontend/vite.config.ts",
+          "hash": "364173550895505076",
+          "deps": [
+            "npm:vite",
+            "npm:@vitejs/plugin-react",
+            "npm:vite-tsconfig-paths"
+          ]
+        }
+      ],
+      "@zypherbase/database": [
+        {
+          "file": "libs/database/.env.example",
+          "hash": "3581668129796287601"
+        },
+        {
+          "file": "libs/database/drizzle.config.ts",
+          "hash": "8454646353266246869",
+          "deps": [
+            "npm:dotenv",
+            "npm:drizzle-kit"
+          ]
+        },
+        {
+          "file": "libs/database/drizzle/0000_redundant_hardball.sql",
+          "hash": "14941891013506696501"
+        },
+        {
+          "file": "libs/database/drizzle/meta/0000_snapshot.json",
+          "hash": "8942391627770729117"
+        },
+        {
+          "file": "libs/database/drizzle/meta/_journal.json",
+          "hash": "4034900352482410129"
+        },
+        {
+          "file": "libs/database/project.json",
+          "hash": "18030221034768754982"
+        },
+        {
+          "file": "libs/database/src/index.ts",
+          "hash": "14632091540376898973",
+          "deps": [
+            "npm:drizzle-orm",
+            "npm:pg"
+          ]
+        },
+        {
+          "file": "libs/database/src/schema/index.ts",
+          "hash": "2668415031593577947"
+        },
+        {
+          "file": "libs/database/src/schema/users.ts",
+          "hash": "15755223173798112493",
+          "deps": [
+            "npm:drizzle-orm"
+          ]
+        },
+        {
+          "file": "libs/database/tsconfig.json",
+          "hash": "3772285717053169265"
+        }
+      ],
+      "@zypherbase/shared": [
+        {
+          "file": "libs/shared/README.md",
+          "hash": "7061724616627558666"
+        },
+        {
+          "file": "libs/shared/eslint.config.mjs",
+          "hash": "12798432934552717702",
+          "deps": [
+            "npm:@eslint/js",
+            "npm:eslint-plugin-prettier",
+            "npm:globals",
+            "npm:typescript-eslint"
+          ]
+        },
+        {
+          "file": "libs/shared/project.json",
+          "hash": "17170673502228554344"
+        },
+        {
+          "file": "libs/shared/src/dto/index.ts",
+          "hash": "10482844153405196290"
+        },
+        {
+          "file": "libs/shared/src/dto/login.dto.ts",
+          "hash": "5964906653268393076",
+          "deps": [
+            "npm:class-validator"
+          ]
+        },
+        {
+          "file": "libs/shared/src/dto/register-response.dto.ts",
+          "hash": "5230757971250127669"
+        },
+        {
+          "file": "libs/shared/src/dto/register.dto.ts",
+          "hash": "3396664502213989771",
+          "deps": [
+            "npm:class-validator",
+            "npm:@nestjs/swagger"
+          ]
+        },
+        {
+          "file": "libs/shared/src/dto/user-response.dto.ts",
+          "hash": "15986006231330301961",
+          "deps": [
+            "npm:class-transformer"
+          ]
+        },
+        {
+          "file": "libs/shared/src/entities/index.ts",
+          "hash": "1186344928749941262"
+        },
+        {
+          "file": "libs/shared/src/entities/user.entity.ts",
+          "hash": "8464560844145175714"
+        },
+        {
+          "file": "libs/shared/src/index.ts",
+          "hash": "14027569822953453762"
+        },
+        {
+          "file": "libs/shared/src/interfaces/auth.interface.ts",
+          "hash": "12886092007569487586"
+        },
+        {
+          "file": "libs/shared/src/interfaces/index.ts",
+          "hash": "3935787241003788938"
+        },
+        {
+          "file": "libs/shared/tsconfig.json",
+          "hash": "6820063496790385258"
+        }
+      ]
+    }
+  }
+}
