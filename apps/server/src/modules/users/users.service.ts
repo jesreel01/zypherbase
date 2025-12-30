@@ -1,18 +1,20 @@
 import { Injectable } from '@nestjs/common';
-import { UpdateUserDto } from './dto/update-user.dto';
 import { User } from '@zypherbase/shared';
+import { UserRepository } from './repositories/user.repository';
 
 @Injectable()
 export class UsersService {
-  existsByEmail(emailksflkk: string): Promise<boolean> {
-    return Promise.resolve(false);
+  constructor(private readonly userRepository: UserRepository) {}
+
+  existsByEmail(email: string): Promise<boolean> {
+    return this.userRepository.existsByEmail(email);
   }
 
   findByEmail(email: string): Promise<User | null> {
-    return Promise.resolve(null);
+    return this.userRepository.findByEmail(email);
   }
 
-  create(data: Partial<User>): Promise<User> {
-    return Promise.resolve(null as unknown as User);
+  create(data: Partial<User> & { passwordHash: string }): Promise<User> {
+    return this.userRepository.create(data);
   }
 }

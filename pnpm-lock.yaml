@@ -87,6 +87,9 @@ importers:
       '@types/passport-jwt':
         specifier: ^4.0.1
         version: 4.0.1
+      '@zypherbase/database':
+        specifier: workspace:^
+        version: link:../../packages/database
       '@zypherbase/shared':
         specifier: workspace:*
         version: link:../../packages/shared

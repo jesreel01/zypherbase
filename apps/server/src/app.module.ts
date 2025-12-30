@@ -6,6 +6,7 @@ import { UsersModule } from './modules/users/users.module';
 import { OrganizationsModule } from './modules/tenancy/organizations/organizations.module';
 import { WorkspacesModule } from './modules/tenancy/workspaces/workspaces.module';
 import { AuthorizationModule } from './modules/authorization/authorization.module';
+import { DatabaseModule } from './modules/database/database.module';
 
 @Module({
   imports: [
@@ -14,6 +15,7 @@ import { AuthorizationModule } from './modules/authorization/authorization.modul
     OrganizationsModule,
     WorkspacesModule,
     AuthorizationModule,
+    DatabaseModule,
   ],
   controllers: [AppController],
   providers: [AppService],
