@@ -1,8 +1,0 @@
-[2m> [22mdrizzle-kit push
-
-[90mNo config path provided, using default 'drizzle.config.ts'[39m
-[90mReading config file '/home/jesreel/Documents/work/zypherbase/libs/database/drizzle.config.ts'[39m
-[90mUsing 'pg' driver for database querying[39m
-[⣷] Pulling schema from database...
-[2K[1A[2K[G[[32m✓[39m] Pulling schema from database...
-[[34mi[39m] No changes detected
