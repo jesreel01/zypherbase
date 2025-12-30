@@ -8,8 +8,8 @@ dist
 out
 build
 
-# Turbo
-.turbo
+# Nx
+.nx
 
 # IDE
 .vscode
